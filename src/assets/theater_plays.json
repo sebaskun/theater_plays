@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Confesiones de Medianoche",
+      "poster": "https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=400&h=600&fit=crop",
+      "genre": "Drama",
+      "maleActors": 2,
+      "femaleActors": 2,
+      "duration": "90 minutos",
+      "briefSummary": "Cuatro extraños atrapados en un ascensor durante un apagón revelan sus secretos más profundos.",
+      "fullSummary": "Un drama psicológico intenso que explora las profundidades de la conciencia humana cuando cuatro extraños se encuentran atrapados en un ascensor durante un apagón en toda la ciudad. Mientras pasan las horas, se revelan secretos y se ponen a prueba los límites morales. La obra examina temas de culpa, redención y conexión humana a través de diálogos intensos y reveladores que mantienen al público en vilo hasta el final.",
+      "downloadUrl": "#"
+    },
+    {
+      "id": 2,
+      "title": "El Último Jardín",
+      "poster": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=600&fit=crop",
+      "genre": "Comedia Dramática",
+      "maleActors": 1,
+      "femaleActors": 2,
+      "duration": "75 minutos",
+      "briefSummary": "Una anciana se niega a vender su jardín urbano a los desarrolladores.",
+      "fullSummary": "Una historia conmovedora sobre una mujer mayor que se niega a vender su jardín urbano a los desarrolladores inmobiliarios. A través del humor y el patetismo, examina temas de progreso versus preservación y el valor de los espacios comunitarios. La obra presenta personajes entrañables que luchan por mantener viva la esencia de su barrio mientras enfrentan las presiones del mundo moderno.",
+      "downloadUrl": "#"
+    },
+    {
+      "id": 3,
+      "title": "Fantasmas Digitales",
+      "poster": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=600&fit=crop",
+      "genre": "Ciencia Ficción",
+      "maleActors": 3,
+      "femaleActors": 2,
+      "duration": "100 minutos",
+      "briefSummary": "En un futuro cercano, la conciencia puede preservarse digitalmente.",
+      "fullSummary": "Ambientada en un mundo de futuro cercano donde la conciencia puede ser preservada digitalmente, esta obra provocativa cuestiona qué significa ser humano cuando la tecnología difumina la línea entre la vida y la muerte. Los personajes enfrentan dilemas éticos profundos mientras navegan por un mundo donde la inmortalidad digital es posible pero a un costo emocional y social muy alto.",
+      "downloadUrl": "#"
+    }
+  ]
