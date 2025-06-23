@@ -6,5 +6,32 @@
 .play-card {
   @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 overflow-hidden;
 }
+.page {
+  @apply min-h-screen bg-gradient-to-br from-slate-50 to-slate-100;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-6;
+}
+
+.button-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2;
+}
+
+.button-back {
+  @apply flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-6 font-medium;
+}
+
+.text-title {
+  @apply text-xl font-bold text-gray-900 mb-3;
+}
+
+.text-subtitle {
+  @apply text-gray-600 mb-4 line-clamp-3;
+}
+
+.text-meta {
+  @apply flex items-center gap-2 text-sm text-gray-500;
+}
 
 /* Add more as needed... */

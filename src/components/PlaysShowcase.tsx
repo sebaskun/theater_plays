@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import { Download, ArrowLeft, Eye } from "lucide-react";
-import GenreBadge from "./GenreBadge";
-import ActorInfo from "./ActorInfo";
 import PlayCard from "./PlayCard";
 import plays from "../assets/theater_plays.json";
-import DurationInfo from "./DurationInfo";
 import DetailView from "./DetailView";
 
 // Type definitions
@@ -21,41 +17,8 @@ interface Play {
   downloadUrl: string;
 }
 
-interface Styles {
-  page: string;
-  container: string;
-  card: string;
-  button: {
-    primary: string;
-    back: string;
-  };
-  text: {
-    title: string;
-    subtitle: string;
-    meta: string;
-  };
-}
-
 function PlaysShowcase() {
   const [selectedPlay, setSelectedPlay] = useState<Play | null>(null);
-
-  // Style constants
-  // CONVERT INTO CUSTOM TAILWIND CSS STYLES
-  const styles: Styles = {
-    page: "min-h-screen bg-gradient-to-br from-slate-50 to-slate-100",
-    container: "max-w-6xl mx-auto px-6",
-    card: "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 overflow-hidden",
-    button: {
-      primary:
-        "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2",
-      back: "flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-6 font-medium",
-    },
-    text: {
-      title: "text-xl font-bold text-gray-900 mb-3",
-      subtitle: "text-gray-600 mb-4 line-clamp-3",
-      meta: "flex items-center gap-2 text-sm text-gray-500",
-    },
-  };
 
   // Component: Header Background
   const HeaderBackground: React.FC = () => (
@@ -78,11 +41,11 @@ function PlaysShowcase() {
 
   // Main List View
   return (
-    <div className={styles.page}>
+    <div className="page">
       <header className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 shadow-2xl overflow-hidden">
         <HeaderBackground />
 
-        <div className={`relative ${styles.container} py-16`}>
+        <div className="relative container py-16">
           <div className="text-center">
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 drop-shadow-2xl">
               <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
@@ -109,7 +72,7 @@ function PlaysShowcase() {
       </header>
 
       <main className="py-16">
-        <div className={styles.container}>
+        <div className="container px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plays.map((play: Play) => (
               <PlayCard key={play.id} play={play} onClick={setSelectedPlay} />
@@ -119,7 +82,7 @@ function PlaysShowcase() {
       </main>
 
       <footer className="bg-gray-900 text-white py-12">
-        <div className={`${styles.container} text-center`}>
+        <div className="container px-6 text-center">
           <h3 className="text-2xl font-bold mb-4">
             ¿Interesado en montar estas obras?
           </h3>
