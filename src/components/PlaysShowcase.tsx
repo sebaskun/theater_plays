@@ -3,19 +3,7 @@ import PlayCard from "./PlayCard";
 import plays from "../assets/theater_plays.json";
 import DetailView from "./DetailView";
 
-// Type definitions
-interface Play {
-  id: number;
-  title: string;
-  poster: string;
-  genre: string;
-  maleActors: number;
-  femaleActors: number;
-  duration: string;
-  briefSummary: string;
-  fullSummary: string;
-  downloadUrl: string;
-}
+import type { Play } from "../types/Play";
 
 function PlaysShowcase() {
   const [selectedPlay, setSelectedPlay] = useState<Play | null>(null);

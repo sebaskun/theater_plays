@@ -2,19 +2,7 @@ import GenreBadge from "./GenreBadge";
 import ActorInfo from "./ActorInfo";
 import DurationInfo from "./DurationInfo";
 
-// Type definitions
-interface Play {
-  id: number;
-  title: string;
-  poster: string;
-  genre: string;
-  maleActors: number;
-  femaleActors: number;
-  duration: string;
-  briefSummary: string;
-  fullSummary: string;
-  downloadUrl: string;
-}
+import type { Play } from "../types/Play";
 
 interface PlayCardProps {
   play: Play;
