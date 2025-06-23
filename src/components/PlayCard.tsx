@@ -1,4 +1,6 @@
 import GenreBadge from "./GenreBadge";
+import ActorInfo from "./ActorInfo";
+import DurationInfo from "./DurationInfo";
 
 interface Styles {
   page: string;
@@ -31,9 +33,28 @@ interface Styles {
     },
   };
 
-function PlayCard({ play }) {
+// Type definitions
+interface Play {
+  id: number;
+  title: string;
+  poster: string;
+  genre: string;
+  maleActors: number;
+  femaleActors: number;
+  duration: string;
+  briefSummary: string;
+  fullSummary: string;
+  downloadUrl: string;
+}
+
+interface PlayCardProps {
+  play: Play;
+  onClick: (play: Play) => void;
+}
+
+function PlayCard({ play, onClick }: PlayCardProps) {
   return (
-    <div className={styles.card} onClick={() => handlePlayClick(play)}>
+    <div className={styles.card} onClick={() => onClick(play)}>
       <div className="relative">
         <img
           src={play.poster}
@@ -61,3 +82,5 @@ function PlayCard({ play }) {
     </div>
   );
 }
+
+export default PlayCard;

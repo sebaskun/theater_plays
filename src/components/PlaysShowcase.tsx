@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { Download, Clock, ArrowLeft, Eye } from "lucide-react";
+import { Download, ArrowLeft, Eye } from "lucide-react";
 import GenreBadge from "./GenreBadge";
 import ActorInfo from "./ActorInfo";
+import PlayCard from "./PlayCard";
+import plays from "../assets/theater_plays.json";
+import DurationInfo from "./DurationInfo";
 
 // Type definitions
 interface Play {
@@ -36,112 +39,9 @@ interface Styles {
   };
 }
 
-interface DurationInfoProps {
-  duration: string;
-  className?: string;
-}
-
-interface PlayCardProps {
-  play: Play;
-}
-
 function PlaysShowcase() {
   const [selectedPlay, setSelectedPlay] = useState<Play | null>(null);
   const [downloadCounts, setDownloadCounts] = useState<DownloadCounts>({});
-
-  // Sample data - replace with your actual plays
-  const plays: Play[] = [
-    {
-      id: 1,
-      title: "Confesiones de Medianoche",
-      poster:
-        "https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=400&h=600&fit=crop",
-      genre: "Drama",
-      maleActors: 2,
-      femaleActors: 2,
-      duration: "90 minutos",
-      briefSummary:
-        "Cuatro extraños atrapados en un ascensor durante un apagón revelan sus secretos más profundos.",
-      fullSummary:
-        "Un drama psicológico intenso que explora las profundidades de la conciencia humana cuando cuatro extraños se encuentran atrapados en un ascensor durante un apagón en toda la ciudad. Mientras pasan las horas, se revelan secretos y se ponen a prueba los límites morales. La obra examina temas de culpa, redención y conexión humana a través de diálogos intensos y reveladores que mantienen al público en vilo hasta el final.",
-      downloadUrl: "#",
-    },
-    {
-      id: 2,
-      title: "El Último Jardín",
-      poster:
-        "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=600&fit=crop",
-      genre: "Comedia Dramática",
-      maleActors: 1,
-      femaleActors: 2,
-      duration: "75 minutos",
-      briefSummary:
-        "Una anciana se niega a vender su jardín urbano a los desarrolladores.",
-      fullSummary:
-        "Una historia conmovedora sobre una mujer mayor que se niega a vender su jardín urbano a los desarrolladores inmobiliarios. A través del humor y el patetismo, examina temas de progreso versus preservación y el valor de los espacios comunitarios. La obra presenta personajes entrañables que luchan por mantener viva la esencia de su barrio mientras enfrentan las presiones del mundo moderno.",
-      downloadUrl: "#",
-    },
-    {
-      id: 3,
-      title: "Fantasmas Digitales",
-      poster:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=600&fit=crop",
-      genre: "Ciencia Ficción",
-      maleActors: 3,
-      femaleActors: 2,
-      duration: "100 minutos",
-      briefSummary:
-        "En un futuro cercano, la conciencia puede preservarse digitalmente.",
-      fullSummary:
-        "Ambientada en un mundo de futuro cercano donde la conciencia puede ser preservada digitalmente, esta obra provocativa cuestiona qué significa ser humano cuando la tecnología difumina la línea entre la vida y la muerte. Los personajes enfrentan dilemas éticos profundos mientras navegan por un mundo donde la inmortalidad digital es posible pero a un costo emocional y social muy alto.",
-      downloadUrl: "#",
-    },
-    {
-      id: 4,
-      title: "Secretos de Pueblo",
-      poster:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
-      genre: "Misterio",
-      maleActors: 3,
-      femaleActors: 3,
-      duration: "95 minutos",
-      briefSummary:
-        "Una periodista investiga una desaparición de décadas en su pueblo natal.",
-      fullSummary:
-        "Cuando una periodista regresa a su pueblo natal para investigar una desaparición ocurrida décadas atrás, descubre una red de mentiras que amenaza con destruir la comunidad que una vez llamó hogar. La obra teje una intrincada trama de misterio mientras explora temas de verdad, política de pueblo pequeño y justicia, manteniendo al público adivinando hasta la revelación final.",
-      downloadUrl: "#",
-    },
-    {
-      id: 5,
-      title: "Amor en Traducción",
-      poster:
-        "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop",
-      genre: "Comedia Romántica",
-      maleActors: 2,
-      femaleActors: 2,
-      duration: "80 minutos",
-      briefSummary:
-        "Dos traductores se enamoran a través de emails mal traducidos.",
-      fullSummary:
-        "Una comedia romántica bilingüe sobre dos traductores que se enamoran a través de emails mal traducidos, explorando cómo el lenguaje tanto conecta como divide en asuntos del corazón. La obra juega ingeniosamente con las barreras del idioma y los malentendidos culturales, creando situaciones cómicas que revelan verdades profundas sobre la comunicación y el amor en un mundo globalizado.",
-      downloadUrl: "#",
-    },
-    {
-      id: 6,
-      title: "El Peso de las Palabras",
-      poster:
-        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=600&fit=crop",
-      genre: "Drama Histórico",
-      maleActors: 4,
-      femaleActors: 3,
-      duration: "110 minutos",
-      briefSummary:
-        "Periodistas en tiempo de guerra deben decidir entre reportar la verdad o proteger vidas.",
-      fullSummary:
-        "Basada en eventos reales, este poderoso drama sigue a un grupo de periodistas durante tiempo de guerra que deben decidir si reportar la verdad o proteger vidas, examinando la responsabilidad que viene con el poder de la prensa. La obra explora los dilemas éticos del periodismo en zonas de conflicto y el peso moral de las decisiones que pueden cambiar el curso de la historia.",
-      downloadUrl: "#",
-    },
-  ];
 
   // Style constants
   // CONVERT INTO CUSTOM TAILWIND CSS STYLES
@@ -161,7 +61,6 @@ function PlaysShowcase() {
     },
   };
 
-  const handlePlayClick = (play: Play): void => setSelectedPlay(play);
   const handleBackToList = (): void => setSelectedPlay(null);
 
   const handleDownload = (play: Play): void => {
@@ -174,17 +73,6 @@ function PlaysShowcase() {
     );
   };
 
-  // Component: Duration Info
-  const DurationInfo: React.FC<DurationInfoProps> = ({
-    duration,
-    className = "",
-  }) => (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <Clock className="w-4 h-4" />
-      <span>{duration}</span>
-    </div>
-  );
-
   // Component: Header Background
   const HeaderBackground: React.FC = () => (
     <div className="absolute inset-0">
@@ -194,36 +82,6 @@ function PlaysShowcase() {
       <div className="absolute bottom-10 right-1/3 w-28 h-28 bg-green-400 rounded-full opacity-20 animate-bounce"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-radial from-white/10 to-transparent rounded-full"></div>
-    </div>
-  );
-
-  // Component: Play Card
-  const PlayCard: React.FC<PlayCardProps> = ({ play }) => (
-    <div className={styles.card} onClick={() => handlePlayClick(play)}>
-      <div className="relative">
-        <img
-          src={play.poster}
-          alt={play.title}
-          className="w-full h-64 object-cover"
-        />
-        <div className="absolute top-4 right-4">
-          <GenreBadge genre={play.genre} />
-        </div>
-      </div>
-
-      <div className="p-6">
-        <h2 className={styles.text.title}>{play.title}</h2>
-        <p className={styles.text.subtitle}>{play.briefSummary}</p>
-
-        <div className="flex items-center justify-between">
-          <ActorInfo
-            maleActors={play.maleActors}
-            femaleActors={play.femaleActors}
-            className={styles.text.meta}
-          />
-          <DurationInfo duration={play.duration} className={styles.text.meta} />
-        </div>
-      </div>
     </div>
   );
 
@@ -334,7 +192,7 @@ function PlaysShowcase() {
         <div className={styles.container}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plays.map((play: Play) => (
-              <PlayCard key={play.id} play={play} />
+              <PlayCard key={play.id} play={play} onClick={setSelectedPlay} />
             ))}
           </div>
         </div>
