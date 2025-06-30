@@ -9,4 +9,5 @@ export interface Play {
   briefSummary: string;
   fullSummary: string;
   downloadUrl: string;
+  youtubeUrl?: string; // Optional, if the play has a YouTube video
 }

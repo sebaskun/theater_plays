@@ -1,6 +1,7 @@
 import GenreBadge from "./GenreBadge";
 import ActorInfo from "./ActorInfo";
 import DurationInfo from "./DurationInfo";
+import { Youtube } from "lucide-react";
 
 import type { Play } from "../types/Play";
 
@@ -24,9 +25,20 @@ function PlayCard({ play, onClick }: PlayCardProps) {
       </div>
 
       <div className="p-6">
-        <h2 className="text-title">{play.title}</h2>
+        <div className="inline-flex items-center gap-2 mb-4">
+          <h2 className="text-title">{play.title}</h2>
+          {play.youtubeUrl && (
+            <a
+              href={play.youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-meta hover:text-primary transition-colors"
+            >
+              <Youtube className="w-5 h-5" />
+            </a>
+          )}
+        </div>
         <p className="text-subtitle">{play.briefSummary}</p>
-
         <div className="flex items-center justify-between">
           <ActorInfo
             maleActors={play.maleActors}
