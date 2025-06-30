@@ -1,21 +1,11 @@
-# Installation Instructions
+# TODO:
 
-Follow these steps to set up and run the project locally:
+1. Add real theater plays
+   1.5 Add filter by genre duration
+2. Add youtube video if available
+3. Make it easy to add or edit plays
+4. Deploy
 
-1. **Clone the repository**
+# Optional
 
-   ```sh
-   git clone https://github.com/your-username/theater_plays_site.git
-   cd theater_plays_site/obras_teatro_site
-
-   ```
-
-2. **Install dependencies**
-   ```sh
-   npm install
-   ```
-
-3. **start the development server**
-   ```sh
-   npm run dev
-   ```
+1. Make a Django app to manage plays

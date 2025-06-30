@@ -1,38 +1,50 @@
 [
   {
     "id": 1,
-    "title": "Confesiones de Medianoche",
-    "poster": "https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=400&h=600&fit=crop",
+    "title": "Todo a Oscuras",
+    "poster": "https://i.postimg.cc/MZRfgn7C/todo-a-oscuras-poster.png",
     "genre": "Drama",
-    "maleActors": 2,
+    "maleActors": 1,
     "femaleActors": 2,
-    "duration": "90 minutos",
-    "briefSummary": "Cuatro extraños atrapados en un ascensor durante un apagón revelan sus secretos más profundos.",
-    "fullSummary": "Un drama psicológico intenso que explora las profundidades de la conciencia humana cuando cuatro extraños se encuentran atrapados en un ascensor durante un apagón en toda la ciudad. Mientras pasan las horas, se revelan secretos y se ponen a prueba los límites morales. La obra examina temas de culpa, redención y conexión humana a través de diálogos intensos y reveladores que mantienen al público en vilo hasta el final.",
-    "downloadUrl": "#"
+    "duration": " 60 minutos",
+    "briefSummary": "Una en el parque entre patas, chelas y corazones rotos termina en secretos oscuros, peleas clandestinas y teorías que harían sudar a cualquier psiquiatra. Todo comenzó con un menú de cuatro lucas.",
+    "fullSummary": "Todo a Oscuras es una obra sobre tres adolescentes que solo querían pasar de año… hasta que la noche, el encierro y una computadora con acceso al sistema del colegio lo complicaron todo. Entre simulacros, apagones, discusiones absurdas y conversaciones demasiado honestas, lo que parecía un plan escolar mediocre termina convirtiéndose en una caída libre hacia lo que no se dice. Es una historia sobre el miedo a quedarse atrás, las ganas de largarse y el peso de lo que callamos —todo contado con humor, nervios y una linterna del celular.",
+    "downloadUrl": "https://drive.google.com/file/d/12WhavpAQ8MSxO44TzmrgWXBof7SXFpSz/view?usp=sharing"
   },
   {
     "id": 2,
-    "title": "El Último Jardín",
-    "poster": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=600&fit=crop",
-    "genre": "Comedia Dramática",
-    "maleActors": 1,
-    "femaleActors": 2,
-    "duration": "75 minutos",
-    "briefSummary": "Una anciana se niega a vender su jardín urbano a los desarrolladores.",
-    "fullSummary": "Una historia conmovedora sobre una mujer mayor que se niega a vender su jardín urbano a los desarrolladores inmobiliarios. A través del humor y el patetismo, examina temas de progreso versus preservación y el valor de los espacios comunitarios. La obra presenta personajes entrañables que luchan por mantener viva la esencia de su barrio mientras enfrentan las presiones del mundo moderno.",
-    "downloadUrl": "#"
+    "title": "El Año de la Rata",
+    "poster": "https://i.postimg.cc/C1yfsCg3/rata-poster.jpg",
+    "genre": "Comedia",
+    "maleActors": 2,
+    "femaleActors": 0,
+    "duration": "20 minutos",
+    "briefSummary": "Un joven limeño abandona el MIT para perseguir su sueño de ser Dotero profesional, desatando el caos familiar. Su padre, un empresario refinado, se infiltra en el inframundo gamer para salvarlo… o al menos entender qué rayos es 'Gaaaa!'",
+    "fullSummary": "Una comedia ácida y entrañable que explora el choque generacional entre un padre aristocrático y su hijo adolescente que decide dejar el MIT para convertirse en jugador profesional de Dota. Ambientada entre mansiones limeñas y cabinas de internet con olor a Cifrut, la obra sigue a Nicanor, un padre desesperado que se sumerge en el caótico mundo gamer para reconectar con su hijo Carlitos. En su travesía, conoce a personajes tan absurdos como humanos —como Rodrigo “Cachudo” Pérez, un Dotero del Callao con corazón de oro— y confronta sus propias fallas como padre. “El Año de la Rata” combina humor, ternura y crítica social para reflexionar sobre los sueños, las expectativas familiares y la difícil tarea de entendernos en un mundo que cambia más rápido que el meta del juego.",
+    "downloadUrl": "https://drive.google.com/file/d/1LnQsabD4ygp7zbxSsw34mcHSpEHO0j4x/view?usp=sharing"
   },
   {
     "id": 3,
-    "title": "Fantasmas Digitales",
-    "poster": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=600&fit=crop",
-    "genre": "Ciencia Ficción",
-    "maleActors": 3,
-    "femaleActors": 2,
-    "duration": "100 minutos",
-    "briefSummary": "En un futuro cercano, la conciencia puede preservarse digitalmente.",
-    "fullSummary": "Ambientada en un mundo de futuro cercano donde la conciencia puede ser preservada digitalmente, esta obra provocativa cuestiona qué significa ser humano cuando la tecnología difumina la línea entre la vida y la muerte. Los personajes enfrentan dilemas éticos profundos mientras navegan por un mundo donde la inmortalidad digital es posible pero a un costo emocional y social muy alto.",
-    "downloadUrl": "#"
+    "title": "Papa Noel",
+    "poster": "https://i.postimg.cc/ncwr1KK3/papanoel-poster.jpg",
+    "genre": "Comedia Dramática",
+    "maleActors": 1,
+    "femaleActors": 1,
+    "duration": "60 minutos",
+    "briefSummary": "Una chibola, un choro y una nochebuena donde todo se va al caño… menos la esperanza. Entre peluches que hablan, juegos inventados y hombres de negro, tal vez Papá Noel sí exista… o tal vez solo quiere escapar con vida.",
+    "fullSummary": "En una elegante casa navideña, un ladrón de barrio irrumpe buscando qué robar, pero se topa con Adri, una niña que cree haber recibido la visita del verdadero Papá Noel. Atrapado entre su propia mentira, la inocencia brutal de la niña y una amenaza mucho más real que se oculta en el segundo piso, el choro tendrá que improvisar juegos, cuentos y hasta redención. Mientras los peluches hablan, los disparos suenan y las mentiras se enredan con la verdad, la obra explora, con humor y espanto, qué tan lejos puede llegar alguien para huir… o para quedarse.",
+    "downloadUrl": "https://drive.google.com/file/d/1wonGHm2sqZlIiBG_lTSIrMu4i5Szb_Nc/view?usp=drive_link"
+  },
+  {
+    "id": 3,
+    "title": "El Chico que Solo Comía Menús",
+    "poster": "https://i.postimg.cc/KvcQTbQn/menus-poster.jpg",
+    "genre": "Comedia Dramática",
+    "maleActors": 2,
+    "femaleActors": 0,
+    "duration": "15 minutos",
+    "briefSummary": "Una junta en el parque entre patas termina en secretos oscuros, peleas clandestinas y teorías que harían sudar a cualquier psiquiatra. Todo comenzó con un menú de cuatro lucas.",
+    "fullSummary": "El Chico que Sólo Comía Menús es una obra sobre dos patas que solo querían olvidarse de sus penas con unas chelas en el parque… hasta que la conversación se va de boca y todo se descontrola. Entre celos, recuerdos borrosos, menús sospechosamente baratos y revelaciones cada vez más delirantes, lo que parecía una charla de causas termina en conspiraciones escondidas en Polvos Azules, peleas clandestinas y realidades que se doblan como pantalla de celular china. Es una historia sobre la amistad, la paranoia y ese momento exacto en que te das cuenta que quizás sí te está comiendo el cerebro algo raro del menú. Todo contado con humor negro, barrio y olor a culantro.",
+    "downloadUrl": "https://drive.google.com/file/d/1OpHRKy1UgdIMWAggIAn2mJLMWVmOzcWD/view?usp=sharing"
   }
 ]

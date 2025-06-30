@@ -18,15 +18,36 @@ interface DetailViewProps {
 function DetailView({ play, onClick }: DetailViewProps) {
   const [downloadCounts, setDownloadCounts] = useState<DownloadCounts>({});
 
-  const handleDownload = (play: Play): void => {
-    setDownloadCounts((prev) => ({
-      ...prev,
-      [play.id]: (prev[play.id] || 0) + 1,
-    }));
+  // const handleDownload = (play: Play): void => {
+  //   setDownloadCounts((prev) => ({
+  //     ...prev,
+  //     [play.id]: (prev[play.id] || 0) + 1,
+  //   }));
+  //   alert(
+  //     `Descargando "${play.title}" - Reemplazar con funcionalidad real de descarga`
+  //   );
+  // };
+
+const handleDownload = (play: Play): void => {
+  setDownloadCounts((prev) => ({
+    ...prev,
+    [play.id]: (prev[play.id] || 0) + 1,
+  }));
+
+  // Try to download the file if downloadUrl exists
+  if (play.downloadUrl) {
+    const link = document.createElement("a");
+    link.href = play.downloadUrl;
+    link.download = `${play.title}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } else {
     alert(
       `Descargando "${play.title}" - Reemplazar con funcionalidad real de descarga`
     );
-  };
+  }
+};
 
   return (
     <div className="page">
