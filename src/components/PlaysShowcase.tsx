@@ -47,6 +47,9 @@ function PlaysShowcase() {
                 ¡Hola! estas son algunas de las obras que escribí. Si alguien
                 desea leerlas es libre de hacerlo. Si quieren montarlas pues
                 ¡avísenme!
+                <p>
+                  <b>sebas.obras.contacto@gmail.com</b>
+                </p>
               </p>
             </div>
           </div>
@@ -79,6 +82,7 @@ function PlaysShowcase() {
             teatrales, escuelas y organizaciones comunitarias. Contáctame para
             información sobre licencias y derechos de representación.
           </p>
+          <p>sebas.obras.contacto@gmail.com</p>
         </div>
       </footer>
     </div>
